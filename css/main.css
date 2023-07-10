@@ -1,0 +1,125 @@
+/*reset*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/*estilos de main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+   padding: 1rem;
+}
+
+/*propiedades de los textos*/
+
+main h1{
+    margin-bottom: 1rem;
+
+}
+
+main p{
+    font-size: 1.3rem;
+}
+
+
+/*propiedades de los botones*/
+
+main .botones{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+ }
+
+main.botones.boton{
+    color: aliceblue;
+    background-color: black;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10%;
+}
+
+main .botones .boton-dos{
+    color: aliceblue;
+    background-color: black;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10%;
+}
+
+/*propiedades para la img*/
+
+main .div-img{
+    display: flex;
+    justify-content: center;
+}
+
+main .div-img img{
+    width: 60%;
+
+}
+
+/*estilos de section*/
+
+section{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+section .card-mia{
+    background-color: beige;
+    margin: 1rem;
+   padding: 1rem;
+   border-radius: 2%;
+    
+}
+
+section .card h2{
+    margin-bottom: 1rem;
+
+}
+
+/*propiedades de mq*/
+
+@media screen and (min-width:1024px) {
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 0.25fr);
+
+        grid-template-areas: 
+        "h1 img"
+        "p img"
+        "botones img";
+
+        align-items: center;
+    }
+    
+
+    main h1{
+        grid-area: h1;
+        margin-bottom: 0,2rem;
+    }
+
+
+    main p{
+        grid-area: p;
+    }
+
+    main .div-img{
+        grid-area: img;
+    }
+
+    main .botones{
+        grid-area: botones;
+        margin-top: 0.2rem;
+    }
+
+    section{
+        flex-direction: row;
+    }
+}       
